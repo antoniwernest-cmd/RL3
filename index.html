@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+ <meta name="theme-color" content="#244a73">
+ <title>Rocky and Luna’s Math Journey</title>
+ <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="math-layout.css?v=8"><link rel="stylesheet" href="mixed-layout.css"><link rel="stylesheet" href="journey-ui.css?v=8"><script defer src="layout.js"></script>
+ <script defer src="objects.js"></script><script defer src="data.js"></script><script defer src="date.js"></script><script defer src="core.js"></script><script defer src="excel.js"></script><script defer src="app.js?v=8"></script>
+</head>
+<body>
+ <div id="storage-notice" class="notice" hidden role="status"></div>
+ <main id="landing" class="landing">
+  <section class="welcome">
+   <div class="brand"><span>LEARN WITH ROCKY &amp; LUNA</span></div>
+   <div class="eyebrow">A little reading magic, every day.</div>
+   <h1>Rocky &amp; Luna’s<br><span>Math Journey</span><span class="sparkle" aria-hidden="true">✦</span></h1>
+   <p class="intro">Explore maths with Rocky and Luna.<br>Look, listen and push your answer.</p>
+   <div class="feature-list"><span><b>01</b> It reads to me.</span><span><b>02</b> I push my answer.</span><span><b>03</b> Six levels to grow with me.</span></div>
+   <div class="level-preview"><span>A · B · C <small>3 answer choices</small></span><span>AA · BB · CC <small>5 answer choices</small></span></div>
+   <div class="section-switch" role="group" aria-label="Choose your grade section"><div class="grade-option" data-character="rocky"><img class="grade-mascot" src="assets/rocky.webp?v=3" alt="Rocky"><button id="grade-excite" type="button" data-section="excite" aria-pressed="true" aria-label="Enter Excite, Grade 2, with Rocky"><span class="grade-emoji" aria-hidden="true">⚡</span><span class="grade-copy"><strong>Excite</strong><span>Grade 2</span></span></button></div><div class="grade-option" data-character="luna"><img class="grade-mascot" src="assets/luna.webp?v=3" alt="Luna"><button id="grade-inspire" type="button" data-section="inspire" aria-pressed="false" aria-label="Enter Inspire, Grade 3, with Luna"><span class="grade-emoji" aria-hidden="true">🌟</span><span class="grade-copy"><strong>Inspire</strong><span>Grade 3</span></span></button></div></div>
+   <button id="export-all" class="text-button">↓ Excel assessment · all objects</button>
+   <small class="local-note">Progress stays in this browser. No name or ID needed.</small>
+  </section>
+  <section class="object-picker" aria-labelledby="choose-title">
+   <div class="picker-heading"><div><div class="eyebrow">YOUR READING SPOT</div><h2 id="choose-title">Choose your school supply</h2></div><span class="pill">20 choices</span></div>
+   <p>Use the same picture each time. Your teacher can match it to your Excel assessment.</p>
+   <div id="object-grid" class="object-grid"></div>
+   <div class="picker-foot"><span>◉ Tap your picture to begin</span><span>Picture matching · Cloze · Picture questions</span></div>
+  </section>
+ </main>
+ <main id="activity" class="activity" data-fit="standard" data-view="sentence" hidden>
+  <div class="activity-top"><div class="journey-top-row"><div class="section-switch" role="group" aria-label="Choose your grade section"><div class="grade-option" data-character="rocky"><img class="grade-mascot" src="assets/rocky.webp?v=3" alt="Rocky"><button id="section-excite" type="button" data-section="excite" aria-pressed="true" aria-label="Enter Excite, Grade 2, with Rocky"><span class="grade-emoji" aria-hidden="true">⚡</span><span class="grade-copy"><strong>Excite</strong><span>Grade 2</span></span></button></div><div class="grade-option" data-character="luna"><img class="grade-mascot" src="assets/luna.webp?v=3" alt="Luna"><button id="section-inspire" type="button" data-section="inspire" aria-pressed="false" aria-label="Enter Inspire, Grade 3, with Luna"><span class="grade-emoji" aria-hidden="true">🌟</span><span class="grade-copy"><strong>Inspire</strong><span>Grade 3</span></span></button></div></div><header class="app-header">
+    <button id="home" class="app-brand" title="Choose a school supply"><img id="journey-home-cat" src="assets/rocky.webp?v=3" alt="Rocky"><span id="app-section-title">Excite · Grade 2</span></button>
+    <div class="header-actions">
+     <button id="object-badge" class="object-badge" title="Change school supply"></button>
+     <details id="teacher-tools" class="teacher-tools"><summary>Teacher tools</summary><div class="teacher-panel" data-scrollable="true">
+      <button id="export-current" class="outline">↓ Excel assessment</button>
+      <div class="teacher-rating" aria-label="Teacher support rating"><span>Teacher:</span><button data-rating="Independent">✓ Independent</button><button data-rating="With help">◐ With help</button><button data-rating="Practising">↻ Practising</button></div>
+      <p id="progress" class="teacher-progress"></p><p class="teacher-legend">Excite Grade 2 and Inspire Grade 3 each have A, B, C, AA, BB and CC. Picture matching, cloze and multiple choice are mixed in each sequence: 80 of each type per grade and level. Three choices at A/B/C and five at AA/BB/CC. Cloze keeps its one/two/three/four-blank progression. Attempts, activity type and picture selections are included in Excel.</p>
+      <button id="reset-all" class="text-button">Reset this object’s progress</button>
+     </div></details>
+    </div>
+   </header></div><div class="journey-controls-row"><div class="math-tools">    <div class="listening-tools"><button id="listen" class="listen">◖)) Listen</button><label class="voice-speed" for="speed"><span>Speed</span><select id="speed" aria-label="Voice speed" title="Choose how fast the question is read"><option value="0.5">Very slow</option><option value="0.65">Slow</option><option value="0.82" selected>Steady</option><option value="1">Fast</option></select></label><button id="stop" class="stop" aria-label="Stop speaking">■ Stop</button></div>
+    <p id="voice-note" class="voice-note" role="status"></p><label class="unit-label">Topic <select id="unit-select"><option value="all">All 480 sentences</option><option value="g2-number">Grade 2 · Number sense</option><option value="g2-data">Grade 2 · Data & probability</option><option value="g3-number">Grade 3 · Number sense</option><option value="g3-data">Grade 3 · Data & probability</option><option value="g2-algebra">Grade 2 · Repeating patterns</option><option value="g3-algebra">Grade 3 · Repeating patterns</option></select></label><div class="view-switch" role="group" aria-label="Activity view"><button id="sentence-view" type="button" aria-pressed="true">Question</button><button id="picture-view" type="button" aria-pressed="false">Picture</button></div></div>
+<div class="activity-toolbar"><a class="hub-link" href="index.html">← Journey home</a><div class="levels" aria-label="Choose a level"><div><div id="levels-one"></div></div><div><div id="levels-two"></div></div></div></div></div></div>
+  <section class="work-card">
+   <aside class="picture-side">
+    <div class="topic-line"><span id="theme">Picture sentence</span><span id="item-count"></span></div>
+    <div id="picture-frame" class="picture-frame"><img id="activity-picture" class="activity-picture" alt=""><p id="matching-placeholder" class="matching-placeholder" hidden>Choose a picture to see it here.</p><div id="picture-covers" aria-hidden="true"></div></div>
+    <span class="picture-caption">Look carefully. Press Picture to enlarge.</span>
+
+   </aside>
+   <div class="workspace">
+    <div class="task-heading"><div><span id="task-eyebrow" class="eyebrow"></span><h2 id="activity-task-title">Complete the sentence</h2></div><span id="piece-count" class="pill"></span></div>
+    <section id="notebook" class="notebook math-notebook" aria-label="Your notebook">
+     <div class="notebook-heading"><div><span class="notebook-caption">MY NOTEBOOK · TODAY’S DATE</span><span class="notebook-date-actions"><time id="notebook-date" class="notebook-date"></time><button id="next-date" class="outline notebook-next" aria-label="Next question">Next →</button></span></div><img class="notebook-pencil" src="assets/supplies/pencil.svg" alt="" aria-hidden="true"></div>
+     <div class="notebook-writing">
+      <div class="pad-label"><span id="mode-instruction">COMPLETE EACH BLANK</span><span id="placed-count" aria-live="polite"></span></div>
+      <p id="context" class="context cloze-context" data-area="sentence" aria-label="Sentence with answer blanks"></p>
+      <p id="mixed-prompt" class="mixed-prompt" hidden></p><img id="matching-photo" class="matching-photo" alt="" hidden><div class="joined-word-panel"><span class="joined-word-label">MY CHOSEN WORDS</span><div id="joined-words" class="joined-words" role="list" aria-label="Your completed words"></div></div>
+      <div class="cloze-bank">
+       <div class="tray-heading"><span id="choice-label"></span><button id="clear-blank" class="text-button">↩ Clear this blank</button></div>
+       <div class="cloze-choice-row"><div id="choices" class="tile-area tray" data-area="choices" aria-label="Answer choices"></div><button id="next-choices" class="primary choices-next" aria-label="Next question">Next →</button></div>
+      </div>
+     </div>
+    </section>
+    <p class="instructions">Push an answer button. For cloze, choose a blank first. You can also drag.</p>
+    <div class="answer-controls"><button id="check" class="primary">Check my answer ✓</button><button id="reset-question" class="outline">↻ Reset question</button><button id="hint" class="outline">Show me a hint</button></div>
+    <p id="feedback" class="feedback" role="status" aria-live="polite"></p><div id="hint-display" class="hint-display" hidden></div>
+   </div>
+  </section>
+  <footer class="activity-footer"><div class="navigation"><button id="previous" class="outline">← Back</button><button id="next" class="primary">Next →</button><button id="shuffle-activities" class="text-button">Shuffle activities</button></div></footer>
+  <section id="balloon-flight" class="balloon-flight" aria-label="Kids in a balloon progress"><div class="balloon-travel" aria-hidden="true"><div id="balloon-rig" class="balloon-rig"><div class="balloon-sway"><img id="balloon-image" class="balloon-image" src="assets/balloon.png" alt=""><span id="balloon-count" class="balloon-count">0</span></div></div></div><p id="flight-status" class="flight-status" role="status" aria-live="polite"></p></section>
+ </main>
+ <div id="section-gate" class="section-gate" role="dialog" aria-modal="true" aria-labelledby="section-gate-title" aria-describedby="section-gate-question" hidden>
+  <div class="section-gate-panel"><div class="section-gate-character"><img id="section-gate-cat" src="assets/rocky.webp?v=3" alt="Rocky"><span id="section-gate-name">Rocky</span></div><div class="section-gate-copy"><p id="section-gate-grade" class="gate-grade">⚡ Excite · Grade 2</p><h2 id="section-gate-title">You’re entering Excite!</h2><p id="section-gate-question">Would you like to proceed?</p><div class="section-gate-actions"><button id="section-gate-cancel" class="outline" type="button">Stay here</button><button id="section-gate-proceed" class="primary" type="button">Yes, enter Excite →</button></div></div></div>
+ </div>
+ <div id="drag-ghost" class="drag-ghost" hidden></div>
+</body>
+</html>

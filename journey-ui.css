@@ -1,0 +1,294 @@
+/* Grade choice stays prominent; the rest of the header uses two short rows. */
+#activity{--sentence-size:30px;--row-size:49px;--choice-size:24px;gap:6px;padding-top:7px;padding-bottom:7px}
+#activity .activity-top{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;margin:0;align-items:stretch}
+#activity .journey-top-row,#activity .journey-controls-row{display:flex;align-items:center;justify-content:space-between;gap:12px;min-width:0}
+#activity .app-header{flex:0 0 auto;display:flex;min-height:0;gap:9px;margin:0;padding:0;border:0}
+#activity .app-brand{padding:0;min-width:40px;min-height:48px}
+#activity .app-brand img{display:block;width:36px;height:44px}
+#activity .app-brand span{display:none}
+#activity .header-actions{gap:8px}
+#activity .object-badge{min-height:44px;padding:4px 10px;font-size:13px}
+#activity .object-badge img{width:30px;height:32px}
+#activity .teacher-tools>summary{min-height:44px;padding:8px 12px;font-size:12px}
+.grade-option{display:flex;align-items:center;gap:4px;min-width:0}
+.grade-mascot{display:block;width:56px;height:64px;object-fit:contain;flex:none}
+.section-switch .grade-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:3px}
+#activity .section-switch{gap:12px;flex:none;margin:0}
+#activity .section-switch button{min-height:60px;min-width:148px;padding:7px 12px;gap:9px;border:2px solid #9bbad7;border-radius:14px;background:#fff;color:#244a73}
+#activity .section-switch button strong{font-size:21px;line-height:1.05}
+#activity .section-switch button .grade-copy>span{font-size:14px;line-height:1.1;font-weight:700}
+#activity .section-switch button .grade-emoji{font-size:29px;line-height:1}
+.section-switch [data-section=excite][aria-pressed=true]{background:#dff4ec!important;border-color:#278464!important;color:#145c45!important;box-shadow:0 0 0 2px #27846424}
+.section-switch [data-section=inspire][aria-pressed=true]{background:#ece4ff!important;border-color:#7953b4!important;color:#533187!important;box-shadow:0 0 0 2px #7953b424}
+#activity .math-tools{display:grid;grid-template-columns:auto minmax(90px,1fr) auto;flex:1;align-items:center;gap:8px;min-width:0;margin:0;position:relative}
+#activity .listening-tools{display:flex;align-items:center;flex-wrap:nowrap;gap:5px;flex:none}
+#activity .listen,#activity .stop{min-height:42px;padding:7px 10px;font-size:14px}
+#activity .math-tools .voice-speed{display:flex;flex:0 0 auto;flex-wrap:nowrap;align-items:center;font-size:11px;gap:4px;margin:0;white-space:nowrap}
+#activity .voice-speed select{width:102px;min-height:40px;padding:5px;font-size:12px}
+#activity .voice-note{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+#activity .unit-label{font-size:11px;gap:5px;min-width:0;width:100%}
+#activity .unit-label select{width:100%;min-width:0;max-width:228px;min-height:42px;font-size:12px}
+#activity .view-switch{display:flex;gap:4px;flex:none}
+#activity .view-switch button{min-height:42px;padding:6px 10px;font-size:12px}
+#activity .activity-toolbar{display:flex;flex:0 0 auto;align-items:center;justify-content:flex-end;gap:10px;margin:0}
+#activity .hub-link{font-size:10px}
+#activity .levels,#activity .levels>div,#activity .levels>div>div{display:flex;flex-direction:row;align-items:center;gap:4px}
+#activity .levels button{height:42px;min-height:42px;width:39px;margin:0;font-size:13px}
+
+/* The recovered height and a wider illustration column go to the activity. */
+#activity .work-card{grid-template-columns:minmax(0,43%) minmax(0,1fr)}
+#activity .picture-side{padding:10px;gap:6px}
+#activity .picture-frame{flex:1;min-height:0;width:100%}
+#activity .picture-frame .activity-picture{display:block;width:100%;height:100%;max-height:100%;object-fit:contain}
+#activity .picture-caption{font-size:10px;line-height:1.2}
+#activity .workspace{gap:5px;padding:9px 12px 7px;min-height:0}
+#activity .notebook-heading{min-height:34px;padding-top:3px;padding-bottom:3px}
+#activity .notebook-caption{display:none}
+#activity .notebook-date-actions{line-height:27px}
+#activity .notebook-next{min-height:28px;padding:3px 7px}
+#activity .notebook-pencil{height:28px;width:20px}
+#activity .notebook-writing{gap:5px}
+#activity #next-choices{display:none}
+#activity .answer-controls button{min-height:42px;font-size:12px;padding:7px 10px}
+#activity .cloze-choice{min-height:50px}
+#activity .sentence-choice{min-height:44px;font-size:18px;line-height:1.2;padding:6px 9px}
+#activity[data-format=multiple-choice][data-answer-layout=short] #choices{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+#activity[data-format=multiple-choice][data-answer-layout=short] .sentence-choice{min-height:54px;font-size:24px;text-align:center;padding:8px}
+#activity[data-format=multiple-choice] #context{font-size:25px;--row-size:38px;line-height:38px}
+#activity[data-format=multiple-choice] .cloze-line-word{height:38px}
+#activity[data-format=picture-match] .task-heading{display:none}
+#activity[data-format=picture-match] .notebook{display:grid;grid-template-rows:auto minmax(0,1fr)}
+#activity[data-format=picture-match] .notebook-heading{min-height:26px;padding-top:2px;padding-bottom:2px}
+#activity[data-format=picture-match] .notebook-date-actions{line-height:24px}
+#activity[data-format=picture-match] .notebook-next,#activity[data-format=picture-match] .notebook-pencil{display:none}
+#activity[data-format=picture-match] .notebook-writing{flex:1;min-height:0;display:grid;grid-template-rows:auto minmax(0,1fr);gap:5px;padding-top:3px;padding-bottom:5px}
+#activity[data-format=picture-match] .pad-label,#activity[data-format=picture-match] .mixed-prompt{display:none}
+#activity[data-format=picture-match] #context{--row-size:42px;min-height:0;font-size:clamp(22px,2.15vw,30px);line-height:42px}
+#activity[data-format=picture-match] .cloze-line-word{height:42px}
+#activity[data-format=picture-match] .cloze-bank{min-height:0;display:grid;grid-template-rows:26px minmax(0,1fr);gap:4px;margin:0}
+#activity[data-format=picture-match] .tray-heading{min-height:0;height:26px;margin:0}
+#activity[data-format=picture-match] .cloze-choice-row{display:block;min-height:0;height:100%}
+#activity[data-format=picture-match] #choices{grid-template-rows:minmax(0,1fr);align-items:stretch;min-height:0;height:100%;width:100%;gap:8px}
+#activity[data-format=picture-match][data-level-length="5"] #choices{grid-template-rows:repeat(2,minmax(0,1fr))}
+#activity .picture-choice{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) 22px;justify-content:stretch;justify-items:stretch;align-items:stretch;gap:2px;padding:4px;min-height:0;height:100%;width:100%;overflow:hidden}
+#activity .picture-choice .choice-picture{position:relative;display:block;width:100%;height:100%;min-height:0;min-width:0}
+#activity .picture-choice .choice-picture img{position:absolute;inset:0;width:100%;height:100%;min-height:0;max-width:none;max-height:none;object-fit:contain;border-radius:6px}
+#activity .picture-choice .picture-letter{display:block;font-size:16px;line-height:22px;font-weight:800;text-align:center}
+#activity .balloon-flight{top:118px}
+
+/* Each mascot sits beside its own large grade button on the landing page. */
+#landing{max-width:1600px;grid-template-columns:minmax(340px,.9fr) minmax(480px,1.2fr);gap:24px;padding:20px}
+#landing .welcome{min-width:0;margin:0}
+#landing .welcome>.eyebrow,#landing .feature-list,#landing .level-preview{display:none}
+#landing .brand{margin-bottom:12px;font-size:9px}
+#landing .brand img{display:none}
+#landing .brand img{width:28px;height:36px}
+#landing .welcome h1{font-size:clamp(40px,4.2vw,62px);line-height:1.04;letter-spacing:-2px;margin:0 0 14px}
+#landing .intro{font-size:16px;line-height:1.4}
+#landing .section-switch{gap:14px;margin:16px 0 8px}
+#landing .grade-option{flex:1;gap:2px}
+#landing .grade-mascot{width:clamp(72px,7vw,108px);height:140px}
+#landing .section-switch button{flex:1;min-width:0;min-height:88px;padding:10px 12px;gap:9px;border:2px solid #9bbad7;border-radius:16px}
+#landing .section-switch button strong{font-size:24px;line-height:1.05}
+#landing .section-switch button .grade-copy>span{font-size:16px;font-weight:700;line-height:1.2}
+#landing .section-switch button .grade-emoji{font-size:30px;line-height:1}
+#landing #export-all{position:static;min-height:32px;font-size:11px;padding:5px 0}
+#landing .local-note{font-size:9px;margin-top:4px}
+#landing .object-grid{grid-template-rows:repeat(4,minmax(0,1fr))}
+
+.section-gate{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:20px;background:#162e53b8;backdrop-filter:blur(5px);overscroll-behavior:none}
+.section-gate-panel{display:grid;grid-template-columns:180px minmax(0,1fr);align-items:center;gap:22px;max-width:680px;width:100%;padding:26px;border:3px solid #278464;border-radius:26px;background:#f9fffc;box-shadow:0 22px 90px #10254260}
+.section-gate[data-section=inspire] .section-gate-panel{border-color:#7953b4;background:#fcf9ff}
+.section-gate-character{display:flex;flex-direction:column;align-items:center;gap:6px}
+.section-gate-character img{width:180px;height:240px;object-fit:contain}
+.section-gate-character>span{font-size:20px;font-weight:800;color:#244a73}
+.gate-grade{font-size:17px;font-weight:800;color:#247456;line-height:1.4;margin-bottom:10px}
+.section-gate[data-section=inspire] .gate-grade{color:#6d49a6}
+.section-gate-copy h2{font-size:30px;line-height:1.15;letter-spacing:-.5px;margin-bottom:14px}
+#section-gate-question{font-size:19px;line-height:1.4}
+.section-gate-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.section-gate-actions button{min-height:50px;font-size:16px;padding:10px 16px}
+.section-gate-actions .primary{background:#247456}
+.section-gate[data-section=inspire] .primary{background:#6d49a6}
+
+@media(max-width:1250px){
+ #activity .hub-link{display:none}
+ #activity .grade-mascot{width:46px;height:58px}
+ #activity .section-switch{gap:8px}
+ #activity .section-switch button{min-width:132px;min-height:58px;padding:7px 9px}
+ #activity .section-switch button strong{font-size:20px}
+ #activity .section-switch button .grade-emoji{font-size:25px}
+ #activity .math-tools{gap:7px}
+ #activity .unit-label{font-size:0;gap:0}
+ #activity .unit-label select{max-width:202px}
+ #activity .levels button{width:36px}
+ #landing .section-switch{gap:8px}
+ #landing .grade-mascot{width:70px;height:118px}
+ #landing .section-switch button{padding:8px;gap:5px;min-height:82px}
+ #landing .section-switch button strong{font-size:21px}
+ #landing .section-switch button .grade-emoji{font-size:25px}
+}
+@media(max-width:1000px){
+ #activity .journey-controls-row{display:grid;grid-template-columns:minmax(0,1fr);gap:5px}
+ #activity .math-tools{justify-content:space-between}
+ #activity .activity-toolbar{justify-content:flex-end}
+ #activity .levels button{width:42px;height:40px;min-height:40px}
+ #activity .work-card{display:block}
+ #activity[data-view=sentence] .picture-side{display:none}
+ #activity[data-view=picture] .workspace{display:none}
+ #activity .workspace,#activity .picture-side{height:100%}
+ #activity .picture-side{border-radius:16px}
+ #activity[data-format=multiple-choice][data-view=sentence] .matching-photo{display:block;height:clamp(90px,15dvh,150px);max-height:150px;width:100%}
+ #activity .balloon-flight{top:158px}
+}
+@media(max-width:900px){
+ #landing{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);align-items:stretch;gap:10px;padding:12px}
+ #landing .brand,#landing .intro,#landing .local-note{display:none}
+ #landing .welcome h1{font-size:32px;line-height:1.1;letter-spacing:-1px;margin:0 0 5px}
+ #landing .welcome h1 br{display:none}
+ #landing .section-switch{margin:0;gap:16px;max-width:680px}
+ #landing .grade-mascot{width:78px;height:94px}
+ #landing .section-switch button{min-height:74px}
+ #landing .section-switch button strong{font-size:23px}
+ #landing .section-switch button .grade-copy>span{font-size:15px}
+ #landing .object-picker{display:flex;flex-direction:column;min-height:0;padding:14px}
+ #landing .object-grid{flex:1;min-height:0;gap:6px}
+ #landing .object-tile{min-height:0;padding:5px;gap:4px}
+ #landing .object-tile img{height:clamp(32px,6dvh,60px);max-height:60px}
+ #landing .object-picker>p{font-size:11px;margin:6px 0 10px}
+ #landing .picker-heading h2{font-size:23px}
+ #landing .picker-foot{margin-top:8px;padding-top:8px;font-size:9px}
+}
+@media(max-width:700px){
+ #activity{--flight-width:56px;padding-left:6px;padding-right:calc(var(--flight-width) + 10px)}
+ #activity .journey-top-row{gap:6px}
+ #activity .section-switch{gap:7px}
+ #activity .grade-option{gap:0}
+ #activity .grade-mascot{width:30px;height:52px}
+ #activity .section-switch button{min-width:102px;min-height:54px;padding:6px;gap:4px;border-radius:11px}
+ #activity .section-switch button strong{font-size:17px}
+ #activity .section-switch button .grade-copy>span{font-size:12px}
+ #activity .section-switch button .grade-emoji{font-size:20px}
+ #activity .app-brand,#activity .object-badge span{display:none}
+ #activity .header-actions{gap:4px}
+ #activity .object-badge{padding:3px;min-height:40px}
+ #activity .teacher-tools>summary{min-height:40px;padding:6px;font-size:10px}
+ #activity .listen,#activity .stop{min-height:40px;padding:5px 7px;font-size:12px}
+ #activity .math-tools{grid-template-columns:minmax(0,1fr) auto;gap:5px}
+ #activity .listening-tools{grid-column:1/-1;justify-content:flex-start;min-width:0}
+ #activity .voice-speed select{width:98px}
+ #activity .unit-label select{max-width:160px;min-height:40px;font-size:11px}
+ #activity .view-switch button{min-height:40px;padding:5px 7px;font-size:11px}
+ #activity .workspace{padding:6px;gap:4px}
+ #activity .answer-controls button{font-size:10px;min-height:40px;padding:6px}
+ #activity .sentence-choice{font-size:16px;min-height:40px}
+ #activity .picture-choice{padding:4px}
+ #activity[data-format=picture-match] #choices{grid-template-columns:repeat(3,minmax(0,1fr))}
+ #activity .balloon-flight{top:154px}
+ #activity .activity-toolbar{justify-content:space-between}
+ #activity .hub-link{display:inline-flex;align-items:center;justify-content:center;min-width:36px;min-height:40px;font-size:0}
+ #activity .hub-link::before{content:'🏠';font-size:22px}
+ .section-gate-panel{grid-template-columns:120px minmax(0,1fr);gap:14px;padding:18px}
+ .section-gate-character img{width:120px;height:190px}
+ .section-gate-copy h2{font-size:25px}
+ #section-gate-question{font-size:17px}
+ .section-gate-actions{margin-top:16px;gap:8px}
+ .section-gate-actions button{font-size:14px;min-height:46px}
+}
+@media(max-width:520px){
+ #activity .journey-top-row{align-items:flex-start}
+ #activity .grade-mascot{display:none}
+ #activity .section-switch button{min-width:97px}
+ #activity .teacher-tools>summary{font-size:9px;padding:5px}
+ #activity .object-badge{display:none}
+ #activity .math-tools{flex-wrap:wrap;justify-content:space-between}
+ #activity .view-switch button{min-width:61px}
+ #activity .unit-label select{max-width:140px}
+ #activity .levels button{width:36px}
+ #landing .welcome h1{font-size:26px}
+ #landing .grade-mascot{width:54px;height:84px}
+ #landing .section-switch{gap:6px}
+ #landing .section-switch button{min-height:70px;padding:5px;gap:3px}
+ #landing .section-switch button strong{font-size:18px}
+ #landing .section-switch button .grade-copy>span{font-size:13px}
+ #landing .section-switch button .grade-emoji{font-size:21px}
+ #landing .picker-heading h2{font-size:19px}
+ #landing .picker-foot{display:none}
+ .section-gate-panel{grid-template-columns:90px minmax(0,1fr);gap:10px;padding:14px}
+ .section-gate-character img{width:90px;height:150px}
+ .section-gate-copy h2{font-size:22px}
+ .gate-grade{font-size:15px}
+}
+@media(max-height:650px){
+ #activity{--sentence-size:25px;--row-size:42px;--choice-size:21px}
+ #activity .section-switch button{min-height:54px}
+ #activity .grade-mascot{height:54px}
+ #activity .task-heading{min-height:24px}
+ #activity .task-heading h2{font-size:18px}
+ #activity .cloze-choice{min-height:44px}
+ #activity .sentence-choice{font-size:16px;min-height:37px;padding:4px 7px}
+ #activity[data-format=multiple-choice][data-view=sentence] .matching-photo{height:76px}
+ #activity .answer-controls button{min-height:36px;font-size:11px}
+ #activity[data-fit=compact]{--sentence-size:24px;--row-size:40px;--choice-size:20px}
+ #activity[data-fit=tight]{--sentence-size:21px;--row-size:36px;--choice-size:19px}
+ #activity[data-fit=tight][data-format=multiple-choice] #context{font-size:22px;--row-size:34px;line-height:34px}
+ #activity[data-fit=tight][data-format=multiple-choice] .cloze-line-word{height:34px}
+ #landing .brand,#landing .intro{display:none}
+ #landing .welcome h1{font-size:39px}
+ #landing .grade-mascot{height:98px}
+ #landing .object-tile{min-height:0}
+ #landing .object-tile img{height:36px}
+ .section-gate-character img{height:180px}
+}
+@media print{
+ html,body{height:100%;overflow:hidden}
+ #activity{position:static;transform:none!important;width:100%;height:96vh;padding:0;--flight-width:0px}
+ #activity .balloon-flight,.section-gate{display:none!important}
+ #activity .activity-top{break-inside:avoid}
+ #activity .grade-mascot{height:44px}
+ @page{size:landscape;margin:8mm}
+}
+@media(min-width:1001px) and (max-width:1150px) and (max-height:650px){
+ #activity .work-card{display:block}
+ #activity[data-view=sentence] .picture-side{display:none}
+ #activity[data-view=picture] .workspace{display:none}
+ #activity .workspace,#activity .picture-side{height:100%}
+ #activity .picture-side{border-radius:16px}
+ #activity .matching-photo{display:none!important}
+ #activity[data-format=multiple-choice] #context{font-size:22px;--row-size:34px;line-height:34px}
+ #activity[data-format=multiple-choice] .cloze-line-word{height:34px}
+}
+@media(max-width:900px){
+ #activity[data-format=picture-match] #choices{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr))}
+ #activity[data-format=picture-match][data-level-length="5"] #choices{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr))}
+}
+@media(max-height:650px){
+ #activity[data-format=picture-match] #context{--row-size:36px;font-size:23px;line-height:36px}
+ #activity[data-format=picture-match] .cloze-line-word{height:36px}
+ #activity[data-format=picture-match] .notebook-heading{min-height:24px}
+ #activity[data-format=picture-match] .answer-controls button{min-height:34px}
+}
+@media(min-width:901px) and (max-height:650px){
+ #activity[data-format=picture-match][data-level-length="5"] #choices{grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:minmax(0,1fr)}
+}
+/* Keep the current illustration with the question on every non-matching page. */
+#activity:not([data-format=picture-match])[data-view=sentence] .work-card{display:grid;grid-template-columns:minmax(0,38%) minmax(0,1fr);grid-template-rows:minmax(0,1fr)}
+#activity:not([data-format=picture-match])[data-view=sentence] .picture-side{display:flex;height:100%;min-height:0;min-width:0;flex-direction:column;gap:5px;padding:8px;border-radius:16px 0 0 16px}
+#activity:not([data-format=picture-match])[data-view=sentence] .workspace{display:flex;height:100%;min-height:0;min-width:0}
+#activity:not([data-format=picture-match]) .matching-photo{display:none!important}
+#activity:not([data-format=picture-match]) .picture-caption{display:none}
+#activity:not([data-format=picture-match]) .picture-frame{position:relative;flex:1;min-height:0;width:100%;height:100%;max-width:none;margin:0}
+#activity:not([data-format=picture-match]) .picture-frame .activity-picture{position:absolute;inset:0;width:100%;height:100%;min-height:0;max-height:none;max-width:none!important;object-fit:contain}
+@media(max-width:1100px) and (orientation:portrait){
+ #activity:not([data-format=picture-match])[data-view=sentence] .work-card{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,27%) minmax(0,1fr)}
+ #activity:not([data-format=picture-match])[data-view=sentence] .picture-side{padding:5px;border-right:0;border-bottom:1px solid #dce6f3;border-radius:16px 16px 0 0}
+ #activity:not([data-format=picture-match])[data-view=sentence] .topic-line{display:none}
+}
+@media(max-width:600px){
+ #activity:not([data-format=picture-match])[data-view=sentence] .work-card{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,19%) minmax(0,1fr)}
+ #activity:not([data-format=picture-match])[data-view=sentence] .picture-side{padding:4px;border-right:0;border-bottom:1px solid #dce6f3;border-radius:16px 16px 0 0}
+ #activity:not([data-format=picture-match])[data-view=sentence] .topic-line{display:none}
+}
+@media(max-height:650px) and (min-width:601px){
+ #activity:not([data-format=picture-match])[data-view=sentence] .work-card{grid-template-columns:minmax(0,32%) minmax(0,1fr);grid-template-rows:minmax(0,1fr)}
+}

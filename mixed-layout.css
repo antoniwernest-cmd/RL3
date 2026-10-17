@@ -1,0 +1,21 @@
+#activity .mixed-prompt{margin:0;color:#3e5770;font-size:12px;line-height:1.3}
+#activity .matching-photo{display:none;align-self:center;object-fit:contain;max-width:100%;height:100px;border-radius:9px}
+#activity .matching-placeholder{font-size:18px;text-align:center;color:#61768d}
+#activity[data-format=picture-match] .work-card{grid-template-columns:minmax(0,1fr)}
+#activity[data-format=picture-match][data-view=sentence] .picture-side{display:none}
+#activity[data-format=picture-match] #choices{grid-template-columns:repeat(3,minmax(0,1fr))}
+#activity .picture-choice{display:flex;flex-direction:column;align-items:center;gap:3px;padding:5px;min-height:0;border:2px solid #cbd3df;background:#f4f5f7}
+#activity .picture-choice img{height:clamp(62px,13vh,112px);width:100%;object-fit:contain;border-radius:5px}
+#activity .picture-choice span{font-size:12px;line-height:1.1;color:#4c6075}
+#activity .mixed-choice.selected{border-color:#247258;box-shadow:0 0 0 2px #b9e4cd;background:#eef8f1}
+#activity[data-format=multiple-choice] #choices{grid-template-columns:minmax(0,1fr);gap:5px}
+#activity .sentence-choice{text-align:left;font-size:17px;line-height:1.25;min-height:40px;padding:6px 10px;font-weight:600;overflow-wrap:normal}
+#activity[data-format=multiple-choice] #context{font-size:24px;--row-size:41px;line-height:41px}
+#activity[data-format=multiple-choice] .cloze-line-word{height:41px}
+#activity #context[data-blank].drop-target{outline:3px dashed #2d9870;outline-offset:2px}
+#drag-ghost[data-format=picture-match]{padding:5px;max-width:130px;background:#fff}
+#drag-ghost[data-format=picture-match] img{width:116px;max-height:84px;object-fit:contain}
+@media(max-width:900px){#activity[data-format=multiple-choice][data-view=sentence] .matching-photo{display:block}#activity .sentence-choice{font-size:16px}#activity .picture-choice img{height:clamp(62px,12vh,108px)}}
+@media(max-width:600px){#activity .sentence-choice{font-size:14px;line-height:1.2;padding:5px 7px;min-height:38px}#activity[data-format=multiple-choice] .matching-photo{height:84px}#activity[data-format=multiple-choice] #context{font-size:19px;--row-size:32px;line-height:32px}#activity[data-format=multiple-choice] .cloze-line-word{height:32px}#activity[data-format=picture-match] #choices{grid-template-columns:repeat(2,minmax(0,1fr))}#activity .picture-choice img{height:70px}#activity .mixed-prompt{font-size:10px}}
+@media(max-height:650px){#activity .picture-choice img{height:70px}#activity .sentence-choice{font-size:15px;min-height:34px;padding:4px 8px}#activity[data-format=multiple-choice] .matching-photo{height:70px}}
+@media(max-height:480px){#activity .picture-choice img{height:49px}#activity .sentence-choice{font-size:13px;line-height:1.15;min-height:29px;padding:3px 6px}#activity[data-format=multiple-choice] .matching-photo{height:55px}#activity .mixed-prompt{display:none}}
